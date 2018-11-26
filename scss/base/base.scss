@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+p,
+h4{
+    color: $second-color;
+    font-family: $font-prime;
+}
+
+p:first-child{
+    margin-bottom: 100px;
+}
+
+a{
+    text-decoration: none;
+    color: map-get($themes, 'default');
+    font-weight: bold;
+}
+
+button {
+    padding: 10px;
+    color: white;
+    @include roundy(5px);
+}
+
+h4 {
+    margin-bottom: 50px;
+}

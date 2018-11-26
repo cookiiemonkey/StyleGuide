@@ -1,0 +1,28 @@
+
+
+%btn-layout {
+    width: $width;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 15px;
+}
+
+%grid__col {
+    padding: 10px;
+    @include roundy(5px);
+    margin-bottom: 6px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

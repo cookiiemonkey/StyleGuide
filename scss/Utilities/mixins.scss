@@ -1,0 +1,107 @@
+@mixin center($w) {
+  width: $w;
+  max-width: $max-width;
+  text-align: center;
+}
+
+@mixin roundy($radius) {
+    border-radius: $radius;
+    border: none;
+}
+
+@mixin flexy($direction) {
+ @if $direction == row {
+     display: flex;
+     flex-wrap: wrap;
+     flex-direction: row;
+ } @else if $direction == column {
+     display: flex;
+     flex-wrap: wrap;
+     flex-direction: column;
+ }
+}
+
+
+
+@mixin addGutter($amount: 1%) {
+    margin-left: $amount;
+    margin-right: $amount;
+}
+
+// Colors
+@mixin themes($map) {
+  @each $theme, $color in $map {
+    &-#{$theme} {
+        background-color: $color;
+        @extend %btn-layout;
+    }
+  } 
+}
+@mixin colerBtn ($btn-color){
+    background-color: map-get($btn-colors, $btn-color);
+}
+
+
+
+// Media queries  
+@mixin media($size) {
+    @if $size == 'lg' {
+        @media all and (min-width: 768px) {
+            @content;
+        }
+    }
+    @else {
+        @error "'#{$size}' is not valid $size argument";
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

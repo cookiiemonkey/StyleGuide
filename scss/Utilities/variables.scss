@@ -1,0 +1,22 @@
+// Color
+$prime-color: #74ebc6; 
+$second-color: #747373;
+$h-color: #cbcbcb;
+
+$themes: (
+    'default': #5ad6ff,
+    'success': #58db58,
+    'error': #d9474d,
+    'warning': #ff8900,
+    'info': #8f46aa,
+);
+
+// Breakpoints
+$breakpoint: 480px;
+
+// Layout
+$width: 480px;
+$center: 0 auto;
+
+// Fonts
+$font-prime: 'Raleway', sans-serif;

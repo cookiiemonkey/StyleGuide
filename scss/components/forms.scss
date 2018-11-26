@@ -1,0 +1,14 @@
+.form {
+    @include flexy(column);
+}
+.form__label--hidden {
+    display: none;
+}
+.form__input {
+    border: none;
+    border-bottom: solid 5px $prime-color;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+}

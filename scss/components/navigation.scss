@@ -1,0 +1,30 @@
+.nav {
+    list-style: none;
+    text-align: center;
+    width: $width;
+    padding-left: 0;
+    padding-bottom: 60px;
+     @include media('lg') {
+        @include flexy($direction: row);
+        margin-top: 70px;
+        margin-left: 80%;
+    }
+}
+.nav__item{
+    
+    padding: 10px;
+    margin: 5px;
+    @include media('lg') {
+        
+    }
+    &:hover {
+        background: $prime-color;
+        border-radius: 5px;
+        a {
+        color: white;
+        }
+    }
+    a{
+        color: black;
+    }
+}

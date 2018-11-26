@@ -1,0 +1,50 @@
+.container{
+    width: $width;
+    margin: $center; 
+    
+    @include media('lg') {
+        @include flexy($direction: row);
+        width: 1024px;
+    }
+    
+}
+
+.grid__row{
+    margin-bottom: 50px;
+    @include media('lg') {
+        @include flexy($direction: row);
+        width: 100%;
+    }
+}
+
+.grid__col--3 {
+    @include flexy(column);
+}
+.grid__col--4 {
+     @include media('lg'){
+        width: 35%;
+    }
+}
+.grid__col--6 {
+    @include flexy(column);
+}
+.grid__col--8 {
+    @include media('lg'){
+        width: 65%;
+    }
+}
+.grid__col--12 {
+    @include flexy(column);
+}
+
+@for $i from 2 through 12 {
+    .grid__col--#{$i} {
+        @extend %grid__col;
+    }
+    //Go around the color wheel to assign colors to grid display cols
+    .grid__col--#{$i}.theme__colors {
+        background-color: adjust-hue($color: #62ff00, $degrees: -20 * $i);
+    }
+    
+    
+}
