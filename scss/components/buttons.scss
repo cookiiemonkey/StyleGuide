@@ -2,8 +2,3 @@
     @include themes ($themes);
 }
 
-.btn--default {
-    @include media('lg'){
-        width: auto;
-    }
-}

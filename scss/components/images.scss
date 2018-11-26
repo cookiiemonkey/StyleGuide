@@ -5,6 +5,9 @@
     margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
+    @include media ('lg') {
+        margin-top: 50px;
+    }
 }
 .img--frame{
     margin: auto;

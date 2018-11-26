@@ -22,7 +22,7 @@
 }
 .grid__col--4 {
      @include media('lg'){
-        width: 35%;
+        width: 35%; 
     }
 }
 .grid__col--6 {
@@ -34,7 +34,7 @@
     }
 }
 .grid__col--12 {
-    @include flexy(column);
+    @include flexy(row);
 }
 
 @for $i from 2 through 12 {
@@ -46,5 +46,14 @@
         background-color: adjust-hue($color: #62ff00, $degrees: -20 * $i);
     }
     
-    
+    @include media('lg') {
+        .grid__col--#{$i} {
+            width: 100% / 12 * $i - 2%;
+            @include addGutter();
+        }
+    }
+}
+
+.centered {
+    margin: auto;
 }
