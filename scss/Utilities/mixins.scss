@@ -50,7 +50,7 @@
 // Media queries  
 @mixin media($size) {
     @if $size == 'lg' {
-        @media all and (min-width: 480px) {
+        @media all and (min-width: $breakpoint) {
             @content;
         }
     }
